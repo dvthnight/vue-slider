@@ -52,9 +52,15 @@ const slider = new Vue ({
         // },
 
         anteprime : function (){
-            this.active = true; 
-            console.log(this.active);
-            attiva();
+            // for(let i=0; i<5; i++){
+            //     this.active = false;
+            // }
+            // this.active = true; 
+            // console.log(this.active);
+            // if(this.active==true){
+            //     return "active";
+            // }
+            console.log(this.paese, this.paese.item,this.active)
         },
 
        

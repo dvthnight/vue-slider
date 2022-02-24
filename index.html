@@ -22,7 +22,7 @@
             </div>
             <div class="col-2" id="anteprime">
 
-                <figure v-for="element in paese" @click="anteprime" :class=" {'active': element.active==true}">
+                <figure v-for="element in paese" @click="element.active = true" :class=" {'active': element.active==true}">
                     <img :src="element.item" alt="">
                 </figure>
                 
