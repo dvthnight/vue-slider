@@ -41,6 +41,8 @@ const slider = new Vue ({
         ],
 
         contatore : 0,
+
+        clock : null,
     },
 
     methods:{
@@ -74,16 +76,27 @@ const slider = new Vue ({
         },
 
         up : function(){
-            if(this.paese>0){
+            console.log("decrementa");
+            if(this.contatore>0){
                 this.contatore--;
             }else{
-                this.contatore = this.paese.length;
+                this.contatore = this.paese.length -1;
             }
         },
 
         
+        stopAutoPlay : function(){
+            clearinterval (this.clock);
+        },
 
+        startAutoPlay : function(){
+            this.clock = setInterval(this.up, 3000);
+        }
 
        
+    },
+
+    mounted(){
+        this.startAutoPlay();
     }
 })
