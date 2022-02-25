@@ -86,7 +86,7 @@ const slider = new Vue ({
 
         
         stopAutoPlay : function(){
-            clearinterval (this.clock);
+            clearInterval (this.clock);
         },
 
         startAutoPlay : function(){
