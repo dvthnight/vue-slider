@@ -13,7 +13,7 @@
 
     <div id="slider">
         <div class="row">
-            <div class="col-10" id="contenitore-principale" v-for="(element,i) in paese" :class="i==contatore ? 'active' : '' ">
+            <div class="col-10" id="contenitore-principale" v-for="(element,i) in paese" :class="[{'active': i== contatore},{'img-secondarie': i != contatore}]" >
                 <!-- <img src="img/01.jpg" alt=""> -->
                 <img :src="element.item" alt="">
 

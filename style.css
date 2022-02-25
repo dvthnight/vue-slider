@@ -92,3 +92,7 @@ figure img{
 .active{
     border: 2px solid white;
 }
+
+.img-secondarie{
+    display: none;
+}
