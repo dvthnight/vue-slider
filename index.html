@@ -13,8 +13,10 @@
 
     <div id="slider">
         <div class="row">
-            <div class="col-10" id="contenitore-principale">
+            <div class="col-10" id="contenitore-principale" v-for="(element,i) in paese" :class="i==contatore ? 'active' : '' ">
                 <!-- <img src="img/01.jpg" alt=""> -->
+                <img :src="element.item" alt="">
+
                 <div class="descrizione">
                     <h3 id="titolo-foto"></h3>
                     <p id="paragrafo-foto"></p>
@@ -22,7 +24,7 @@
             </div>
             <div class="col-2" id="anteprime">
 
-                <figure v-for="element in paese" @click="element.active = true" :class=" {'active': element.active==true}">
+                <figure v-for="(element,i) in paese" @click="contatore = i" :class=" {'active': i== contatore}">
                     <img :src="element.item" alt="">
                 </figure>
                 
@@ -42,8 +44,8 @@
                     <img src="img/02.jpg" alt="">
                 </figure> -->
 
-                <span class="arrow arrow-up"><i class="fas fa-chevron-up"></i></span>
-                <span class="arrow arrow-down"><i class="fas fa-chevron-down"></i></span>
+                <span class="arrow arrow-up" @click="up"><i class="fas fa-chevron-up"></i></span>
+                <span class="arrow arrow-down" @click="down"><i class="fas fa-chevron-down"></i></span>
 
             </div>
         </div>
